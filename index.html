@@ -16,16 +16,28 @@
             color: white;
             text-align: center;
             padding: 20px;
-            font-size: 24px;
+            font-size: 28px;
+            font-weight: bold;
         }
         .container {
-            width: 80%;
+            width: 90%;
             margin: auto;
             overflow: hidden;
         }
+        .profile {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #ddd;
+        }
         .portfolio {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             padding: 20px 0;
         }
@@ -33,29 +45,42 @@
             width: 100%;
             height: auto;
             border-radius: 5px;
+            transition: transform 0.3s;
         }
-        .profile {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+        .portfolio img:hover {
+            transform: scale(1.05);
         }
         .about, .contact {
             background: white;
             padding: 20px;
             margin-top: 20px;
             border-radius: 5px;
+            text-align: center;
+        }
+        .contact p {
+            font-size: 18px;
         }
         footer {
             text-align: center;
-            padding: 10px;
+            padding: 15px;
             background: black;
             color: white;
             margin-top: 20px;
+            font-size: 14px;
+        }
+        nav {
+            background: #333;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -63,13 +88,21 @@
     <header>
         Abby Flake - Model Portfolio
     </header>
+    
+    <nav>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About Me</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
     <div class="container">
         <section class="profile">
-            <img src="IMG_0072.JPEG" alt="Abby Flake - Profile Picture" class="profile-pic">
+            <img src="IMG_0072.JPEG" alt="Abby Flake - Profile Picture">
             <h2>Welcome to My Portfolio</h2>
             <p>Hi! My name is Abby Flake, a dedicated commercial and editorial model passionate about creating stunning visuals. Explore my work below!</p>
         </section>
-        <section class="portfolio">
+
+        <section class="portfolio" id="portfolio">
             <img src="IMG_0073.JPEG" alt="Abby Flake - Commercial Shoot">
             <img src="IMG_0074.JPEG" alt="Abby Flake - Editorial Shoot">
             <img src="IMG_0096.JPEG" alt="Abby Flake - Fashion">
@@ -80,19 +113,22 @@
             <img src="IMG_2931.JPG" alt="Abby Flake - Photoshoot">
             <img src="IMG_2932.JPG" alt="Abby Flake - Studio Shot">
             <img src="IMG_2933.JPG" alt="Abby Flake - High Fashion">
-            <img src="IMG_2934.JPG" alt="Abby Flake - Natural Beauty">
             <img src="IMG_2935.JPG" alt="Abby Flake - Outdoor Shoot">
         </section>
-        <section class="about">
+
+        <section class="about" id="about">
             <h2>About Me</h2>
-            <p>Hi! My name is Abby Flake, and I am a passionate commercial and editorial model dedicated to bringing creativity, confidence, and professionalism to every project. I am always open to new opportunities to grow my brand and collaborate with photographers, designers, and brands.</p>
+            <p>Hi! My name is Abby Flake, and I am a passionate commercial and editorial model dedicated to bringing creativity, confidence, and professionalism to every project. 
+            I am always open to new opportunities to grow my brand and collaborate with photographers, designers, and brands.</p>
         </section>
-        <section class="contact">
+
+        <section class="contact" id="contact">
             <h2>Contact</h2>
-            <p>Email: abbyflake@example.com</p>
-            <p>Instagram: @abbyflakeofficial</p>
+            <p>Email: <strong>abbyflake5@gmail.com</strong></p>
+            <p>Instagram: <a href="https://www.instagram.com/abbyflakeofficial" target="_blank">@abbyflakeofficial</a></p>
         </section>
     </div>
+
     <footer>
         &copy; 2025 Abby Flake Model Portfolio. All Rights Reserved.
     </footer>
